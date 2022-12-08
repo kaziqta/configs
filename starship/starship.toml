@@ -1,6 +1,6 @@
 format = """
-[$directory](bold cyan)($git_branch$git_state$git_status)
-$time $username [»](bold green) """
+[$directory](bold cyan)($git_branch$git_state$git_status)($aws)($kubernetes)
+[»](bold green) """
 
 [git_branch]
 style = "bold green"
@@ -38,3 +38,20 @@ format = "[$user]($style)"
 disabled = false
 format = "[$time]($style)"
 time_format = "%H:%M"
+
+[aws]
+format = ' on [$symbol($profile )(\($region\) )]($style)'
+style = "bold yellow"
+symbol = " "
+[aws.region_aliases]
+ap-southeast-2 = "au"
+us-east-1 = "va"
+[aws.profile_aliases]
+CompanyGroupFrobozzOnCallAccess = 'Frobozz'
+
+[kubernetes]
+format = 'on [ ($context)]($style) '
+style = "bold cyan"
+disabled = false
+[kubernetes.context_aliases]
+"arn:aws:eks:eu-central-1:532985982628:cluster/nkb-dev-eks-cluster" = "nkb_dev"
