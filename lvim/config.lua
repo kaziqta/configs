@@ -11,7 +11,9 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
-lvim.colorscheme = "nord"
+-- lvim.colorscheme = "tokyonight-storm"
+lvim.colorscheme = "tokyonight-night"
+
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -192,8 +194,8 @@ lvim.plugins = {
       local map = require('mini.map')
       map.setup({
         integrations = {
-          map.gen_integration.builtin_search(),
           map.gen_integration.diagnostic({
+          map.gen_integration.builtin_search(),
             error = 'DiagnosticFloatingError',
             warn  = 'DiagnosticFloatingWarn',
             info  = 'DiagnosticFloatingInfo',
@@ -283,6 +285,12 @@ lvim.plugins = {
   {
     "cocopon/iceberg.vim"
   },
+  {
+    "terryma/vim-smooth-scroll"
+  },
+  {
+    "yuttie/comfortable-motion.vim"
+  },
 }
 -- Additional Plugins
 -- lvim.plugins = {
@@ -307,6 +315,7 @@ lvim.plugins = {
 --     require("nvim-treesitter.highlight").attach(0, "bash")
 --   end,
 -- })
+--
 --
 lvim.autocommands = {
   {

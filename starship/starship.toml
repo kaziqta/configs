@@ -51,7 +51,7 @@ CompanyGroupFrobozzOnCallAccess = 'Frobozz'
 
 [kubernetes]
 format = 'on [ ($context)]($style) '
-style = "bold cyan"
+style = "bold blue"
 disabled = false
 [kubernetes.context_aliases]
 "arn:aws:eks:eu-central-1:532985982628:cluster/nkb-dev-eks-cluster" = "nkb_dev"
